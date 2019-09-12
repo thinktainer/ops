@@ -7,3 +7,5 @@ relative_links:
 include:
 - benthos.md
 - kubernetes.md
+
+theme: jekyll-theme-minimal
