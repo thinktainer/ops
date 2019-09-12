@@ -8,7 +8,11 @@ This is my personal ops faq. I dump stuff i find useful in here, so I don't have
 Get `<compose-network>` with docker network ls.
 
 ```
-docker run -ti -v$PWD/3-s3-kafka.yaml:/benthos.yaml -v$PWD/logger.yaml:/logger.yaml --network <compose-network>  <registry>/benthos
+docker run -ti \
+	-v$PWD/3-s3-kafka.yaml:/benthos.yaml \
+	-v$PWD/logger.yaml:/logger.yaml \
+	--network <compose-network> \
+	<registry>/benthos
 ```
 
 ## kubernetes
