@@ -4,8 +4,5 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-include:
-- benthos.md
-- kubernetes.md
 
 theme: jekyll-theme-slate
