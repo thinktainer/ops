@@ -35,3 +35,7 @@ add bootstrap server or zookeeper endpoints with either `--bootstrap-server=loca
 		kubectl exec -ti kafka-$(( $RANDOM %5 )) -c broker /opt/kafka/bin/$1 -- $@
 	}
 
+## cockroach in k8s with secure connection
+
+    k exec -ti cockroachdb-0 -- /cockroach/cockroach sql \
+    --url 'postgres://localhost:26257/<database>?sslmode=require&sslcert=/<patch-to-cockroach-certs>/node.crt&sslkey=/<path-to-cockroach-certs>/node.key'
